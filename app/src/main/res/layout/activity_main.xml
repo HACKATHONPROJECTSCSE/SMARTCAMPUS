@@ -27,7 +27,7 @@
         android:layout_alignParentBottom="true"
         android:adjustViewBounds="true"
         android:contentDescription=""
-        android:src=""
+        android:src="@drawable/main_git_logo"
         android:transitionName="logoImage" />
 
 </RelativeLayout>
