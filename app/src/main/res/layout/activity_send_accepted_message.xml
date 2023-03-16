@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Student.StudentGatePass.SendAcceptedMessage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Contact No"
+        android:textColor="#787575"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/contactNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="xyz"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/accepted"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/contactNo"
+        android:layout_marginTop="20dp"
+        android:hint="GATEPASS ACCEPTED"
+        android:text="GATEPASS ACCEPTED"
+        android:textColorHint="@color/black" />
+
+    <Button
+        android:id="@+id/sendAccepted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accepted"
+        android:layout_centerInParent="true"
+        android:text="Send" />
+
+
+</RelativeLayout>

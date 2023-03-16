@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Teacher.TeacherMessage.MessageInfo">
+
+    <RelativeLayout
+        android:id="@+id/SDashRelativeTop"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/sdash_relative_top">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_light"
+            android:gravity="center"
+            android:text="SMART CAMPUS"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/SDashLinear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/sdash_relative_middle"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/Message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_light"
+                android:gravity="center"
+                android:text="Hello User, This Message Module Has Not Been Developed To The Fullest If Any Android Developer Has To Make Any Contribution To This Project Can Mail Me At"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/Message2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Message"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/comfortaa_light"
+                android:gravity="center"
+                android:text="@string/saurabhjadhav_cse_gmail_com"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/GoBack"
+                style="@style/studentDashBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Message2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Go Back"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

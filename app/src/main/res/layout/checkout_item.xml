@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/visitor_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:text="Visitor Name:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/visitor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/visitor_lable"
+        app:layout_constraintLeft_toRightOf="@id/visitor_lable"
+        app:layout_constraintTop_toTopOf="@id/visitor_lable"
+        tools:text="Visitor Name" />
+
+    <TextView
+        android:id="@+id/host_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Host Name:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@id/visitor_lable"
+        app:layout_constraintTop_toBottomOf="@id/visitor_lable" />
+
+    <TextView
+        android:id="@+id/host_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/host_lable"
+        app:layout_constraintLeft_toRightOf="@id/host_lable"
+        app:layout_constraintTop_toTopOf="@id/host_lable"
+        tools:text="Host Name" />
+
+    <TextView
+        android:id="@+id/phone_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Phone:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@id/visitor_lable"
+        app:layout_constraintTop_toBottomOf="@id/host_lable" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/phone_lable"
+        app:layout_constraintLeft_toRightOf="@id/phone_lable"
+        app:layout_constraintTop_toTopOf="@id/phone_lable"
+        tools:text="88888888" />
+
+    <TextView
+        android:id="@+id/checkinTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="CheckIn Time:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@id/visitor_lable"
+        app:layout_constraintTop_toBottomOf="@id/phone_lable" />
+
+    <TextView
+        android:id="@+id/checkinTime"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/checkinTimeLabel"
+        app:layout_constraintTop_toBottomOf="@id/phone_lable"
+        tools:text="88888888" />
+
+    <Button
+        android:id="@+id/check_out_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0A040A"
+        android:padding="10dp"
+        android:paddingHorizontal="2dp"
+        android:text="Check In"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/secondary_check"
+        app:layout_constraintTop_toBottomOf="@id/check_out_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
