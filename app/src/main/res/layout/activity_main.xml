@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".Student.Sheild.SheildDashboard">
 
     <TextView
         android:id="@+id/textViewTop"
@@ -15,7 +15,7 @@
         android:fontFamily="@font/gabriela"
         android:gravity="center"
         android:padding="10dp"
-        android:text="SMART CAMPUS"
+        android:text="@string/smart_campus"
         android:textColor="@color/black"
         android:textSize="40sp"
         android:transitionName="logoText" />
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:adjustViewBounds="true"
-        android:contentDescription=""
+        android:contentDescription="@string/splashscreenlogo"
         android:src="@drawable/main_git_logo"
         android:transitionName="logoImage" />
 

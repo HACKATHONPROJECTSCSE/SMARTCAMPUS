@@ -21,13 +21,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.saurabhjadhav.smartcampus.ComplaintAAP.ComplaintAAP;
-import com.saurabhjadhav.smartcampus.DeveloperInfo.DeveloperInfo;
 import com.saurabhjadhav.smartcampus.R;
 import com.saurabhjadhav.smartcampus.Student.Attendance.AttendanceDashboard;
+import com.saurabhjadhav.smartcampus.Student.DeveloperInfo.DeveloperInfo;
 import com.saurabhjadhav.smartcampus.Student.Elrc.StudentElrcHome;
 import com.saurabhjadhav.smartcampus.Student.GateEntryExit.GateEntryExitDashboard;
 import com.saurabhjadhav.smartcampus.Student.ImportantContacts.StudentImportantContacts;
+import com.saurabhjadhav.smartcampus.Student.NoticeBoard.DisplayNotice;
 import com.saurabhjadhav.smartcampus.Student.Sheild.SplashActivity;
 import com.saurabhjadhav.smartcampus.Student.StudentCampus.StudentCampus;
 import com.saurabhjadhav.smartcampus.Student.StudentFItness.StudentFitnessHome;
@@ -119,12 +119,21 @@ public class StudentDashboard extends AppCompatActivity {
             }
         });
 
+
         attendanceView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(StudentDashboard.this, AttendanceDashboard.class));
             }
         });
+
+        noticeView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StudentDashboard.this, DisplayNotice.class));
+            }
+        });
+
 
         elrcView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -192,12 +201,14 @@ public class StudentDashboard extends AppCompatActivity {
             }
         });
 
-        complaint.setOnClickListener(new View.OnClickListener() {
+     /*   complaint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(StudentDashboard.this, ComplaintAAP.class));
             }
         });
+
+      */
 
 
         // FIREBASE USERNAME RETRIEVE
