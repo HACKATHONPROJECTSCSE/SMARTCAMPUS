@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "664756818710",
+    "project_id": "smart-campus-6493b",
+    "storage_bucket": "smart-campus-6493b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664756818710:android:be17c6a56d8075b888b637",
+        "android_client_info": {
+          "package_name": "com.saurabhjadhav.smartcampus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664756818710-e8p0j2ct7curlbd14t8qnd4lc4ne2nai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFz0tkomctN58y_1fVcv4BCZUfrJajnPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664756818710-e8p0j2ct7curlbd14t8qnd4lc4ne2nai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
