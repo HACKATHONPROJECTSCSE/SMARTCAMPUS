@@ -24,7 +24,7 @@
             app:cardCornerRadius="12dp"
             app:cardElevation="10dp">
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/CollegeCampusImages"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -47,10 +47,22 @@
                     android:layout_marginTop="12dp"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="@string/hostel"
+                    android:layout_below="@id/HostelImageLoader"
+                    android:layout_centerHorizontal="true"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
-            </LinearLayout>
+                <ImageView
+                    android:id="@+id/HostelImageDownloader"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/download_icon"
+                    android:layout_toRightOf="@id/HostelDescriptionLoader"
+                    android:layout_below="@id/HostelImageLoader"
+                    android:layout_marginTop="12dp"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
