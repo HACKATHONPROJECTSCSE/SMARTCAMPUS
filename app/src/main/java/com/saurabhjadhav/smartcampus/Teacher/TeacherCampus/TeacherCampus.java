@@ -13,7 +13,7 @@ import com.saurabhjadhav.smartcampus.Teacher.TeacherDashboard;
 
 public class TeacherCampus extends AppCompatActivity {
 
-    LinearLayout collegeCampusImages, collegeHostelImages;
+    LinearLayout collegeCampusImages, collegeHostelImages, uploadCampusImages;
     ImageView backToSDash;
 
     @Override
@@ -24,6 +24,8 @@ public class TeacherCampus extends AppCompatActivity {
         collegeCampusImages = findViewById(R.id.CollegeCampusImages);
         collegeHostelImages = findViewById(R.id.CollegeHostelImages);
         backToSDash = findViewById(R.id.BackToSDash);
+        uploadCampusImages = findViewById(R.id.uploadCampusimage);
+
 
         backToSDash.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +46,13 @@ public class TeacherCampus extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(TeacherCampus.this, TeacherCampusHostelImages.class));
+            }
+        });
+
+        uploadCampusImages.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TeacherCampus.this, SendCampusImages.class));
             }
         });
 

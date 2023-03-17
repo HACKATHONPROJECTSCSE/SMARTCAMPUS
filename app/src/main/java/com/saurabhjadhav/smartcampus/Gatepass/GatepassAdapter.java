@@ -38,6 +38,7 @@ public class GatepassAdapter extends FirestoreRecyclerAdapter<GatepassModel, Gat
         gatepassHolder.leaveDate.setText(gatepassModel.getLeaveDate());
         gatepassHolder.returnDate.setText(gatepassModel.getReturnDate());
         gatepassHolder.returnTime.setText(gatepassModel.getReturnTime());
+        
 
     }
 

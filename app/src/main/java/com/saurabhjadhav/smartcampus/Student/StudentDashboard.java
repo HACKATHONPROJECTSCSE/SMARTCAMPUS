@@ -29,6 +29,7 @@ import com.saurabhjadhav.smartcampus.Student.Elrc.StudentElrcHome;
 import com.saurabhjadhav.smartcampus.Student.GateEntryExit.GateEntryExitDashboard;
 import com.saurabhjadhav.smartcampus.Student.ImportantContacts.StudentImportantContacts;
 import com.saurabhjadhav.smartcampus.Student.NoticeBoard.DisplayNotice;
+import com.saurabhjadhav.smartcampus.Student.PlacementPrediction.MainDashboard;
 import com.saurabhjadhav.smartcampus.Student.Sheild.SplashActivity;
 import com.saurabhjadhav.smartcampus.Student.StudentCampus.StudentCampus;
 import com.saurabhjadhav.smartcampus.Student.StudentFItness.StudentFitnessHome;
@@ -46,7 +47,7 @@ public class StudentDashboard extends AppCompatActivity {
     Button profile, studentTodo;
     TextView username;
     ImageView profileImage;
-    LinearLayout campusView, noticeView, websiteView, messageView, fitnessView, developerView, elrcView, shield, gatepass, impContacts, complaint, quotes, GateEntryView, attendanceView, cgpaCalculator;
+    LinearLayout campusView, noticeView, websiteView, messageView, fitnessView, developerView, elrcView, shield, gatepass, impContacts, complaint, quotes, GateEntryView, attendanceView, placementPredicition;
 
     // FIREBASE
 
@@ -80,6 +81,7 @@ public class StudentDashboard extends AppCompatActivity {
         quotes = findViewById(R.id.MotivationalQuotes);
         GateEntryView = findViewById(R.id.GateEntryView);
         attendanceView = findViewById(R.id.AttendanceView);
+        placementPredicition = findViewById(R.id.PlacementPredicition);
 
 
 
@@ -136,6 +138,12 @@ public class StudentDashboard extends AppCompatActivity {
             }
         });
 
+        placementPredicition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StudentDashboard.this, MainDashboard.class));
+            }
+        });
 
         elrcView.setOnClickListener(new View.OnClickListener() {
             @Override

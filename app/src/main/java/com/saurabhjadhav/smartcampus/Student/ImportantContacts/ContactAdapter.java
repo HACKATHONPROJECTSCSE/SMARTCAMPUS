@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.saurabhjadhav.smartcampus.R;
-import com.saurabhjadhav.smartcampus.Student.ImportantContacts.Contact;
 
 import java.util.List;
 

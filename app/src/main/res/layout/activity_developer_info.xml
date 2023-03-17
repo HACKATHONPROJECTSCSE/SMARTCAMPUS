@@ -44,92 +44,11 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
+                        android:layout_width="300dp"
+                        android:layout_height="500dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/group" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/sir"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:onClick="Expand"
-                android:padding="20dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="20dp"
-                app:contentPadding="20dp">
-
-                <RelativeLayout
-                    android:id="@+id/layout1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:animateLayoutChanges="true"
-                    android:orientation="vertical">
-
-
-                    <ImageView
-                        android:id="@+id/imageview1"
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:layout_centerHorizontal="true"
-                        android:src="@drawable/makhandke" />
-
-                    <TextView
-                        android:id="@+id/detailsHide"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/imageview1"
-                        android:layout_centerHorizontal="true"
-                        android:gravity="center"
-                        android:text=""
-                        android:textSize="20sp"
-                        android:visibility="gone" />
-
-                </RelativeLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/si2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/sir"
-                android:layout_margin="20dp"
-                android:onClick="Expand2"
-                android:padding="20dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="20dp"
-                app:contentPadding="20dp">
-
-                <LinearLayout
-                    android:id="@+id/layout2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:animateLayoutChanges="true"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/saurabhdev" />
-
-                    <TextView
-                        android:id="@+id/detailsHide2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/i_am_a_talented_ambitious_and_hardworking_individual_with_broad_skills_and_experience_in_android_and_web_development_social_media_and_leading_projects_furthermore_i_am_adept_at_handling_multiple_tasks_on_a_daily_basis_competently_a_key_strength_is_communication_building_strong_relationships_with_people_in_order_to_deliver_the_best_results"
-                        android:textSize="20sp"
-                        android:visibility="gone" />
+                        android:scaleX="1"
+                        android:src="@drawable/image" />
 
                 </LinearLayout>
 

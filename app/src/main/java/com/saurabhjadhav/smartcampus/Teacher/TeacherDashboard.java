@@ -22,6 +22,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.saurabhjadhav.smartcampus.R;
+import com.saurabhjadhav.smartcampus.Teacher.Notice.SendNoticeImages;
 import com.saurabhjadhav.smartcampus.Teacher.TODO.TeacherTODO;
 import com.saurabhjadhav.smartcampus.Teacher.TeacherCampus.TeacherCampus;
 import com.saurabhjadhav.smartcampus.Teacher.TeacherGatepass.GatepassRecevier;
@@ -104,6 +105,13 @@ public class TeacherDashboard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(TeacherDashboard.this, TeacherMessageView.class));
+            }
+        });
+
+        noticeView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TeacherDashboard.this, SendNoticeImages.class));
             }
         });
 

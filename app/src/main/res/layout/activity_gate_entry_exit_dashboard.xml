@@ -56,7 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:text="Visitor Details"
+                android:text="Student Details"
                 android:textSize="30sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -72,7 +72,7 @@
 
                 android:layout_marginRight="32dp"
                 android:layout_weight="1"
-                android:hint="Visitor Name"
+                android:hint="Name"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/visitor_lable">
@@ -95,7 +95,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="32dp"
                 android:layout_weight="1"
-                android:hint="Visitor E-Mail"
+                android:hint="E-Mail"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/email_layout">
@@ -118,7 +118,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="32dp"
                 android:layout_weight="1"
-                android:hint="Visitor Phone"
+                android:hint="Phone"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/visitor_email_layout">
@@ -139,7 +139,7 @@
                 android:layout_below="@id/visitor_phone_layout"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="30dp"
-                android:text="Host Details"
+                android:text="Admin Details"
                 android:textSize="30sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"

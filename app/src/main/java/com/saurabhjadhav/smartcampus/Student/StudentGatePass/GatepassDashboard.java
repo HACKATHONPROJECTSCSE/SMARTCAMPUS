@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.saurabhjadhav.smartcampus.Gatepass.GatepassRevicer;
 import com.saurabhjadhav.smartcampus.Gatepass.GatepassWrite;
 import com.saurabhjadhav.smartcampus.R;
 import com.saurabhjadhav.smartcampus.Student.StudentDashboard;
@@ -25,6 +26,7 @@ public class GatepassDashboard extends AppCompatActivity {
         setContentView(R.layout.activity_gatepass_dashboard);
 
         writeGatepass = findViewById(R.id.writeGatepass);
+        statusGatepass = findViewById(R.id.seegatepass);
 
         backToSDash = findViewById(R.id.BackToSDash);
 
@@ -43,6 +45,12 @@ public class GatepassDashboard extends AppCompatActivity {
             }
         });
 
+        statusGatepass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(GatepassDashboard.this, GatepassRevicer.class));
+            }
+        });
 
 
         // BANNER ADS START
