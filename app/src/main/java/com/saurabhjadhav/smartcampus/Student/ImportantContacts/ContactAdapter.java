@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,7 +40,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.EventVie
     public void onBindViewHolder(@NonNull EventViewHolder holder, int position) {
         holder.name.setText(ContactList.get(position).getName());
         holder.number.setText(ContactList.get(position).getNumber());
-        holder.number.setOnClickListener(new View.OnClickListener() {
+        holder.call_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String number = ContactList.get(holder.getAdapterPosition()).getNumber();
@@ -59,11 +60,13 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.EventVie
 
     public class EventViewHolder extends RecyclerView.ViewHolder {
         public TextView name, number;
+        ImageView call_img;
 
         public EventViewHolder(View view) {
             super(view);
             name = view.findViewById(R.id.name_faculty);
             number = view.findViewById(R.id.faculty_number);
+            call_img=view.findViewById(R.id.call_img);
         }
     }
 }

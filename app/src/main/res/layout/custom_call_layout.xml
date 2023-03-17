@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="20dp">
+    android:padding="5dp">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
@@ -39,7 +39,7 @@
 
                 <TextView
                     android:id="@+id/faculty_number"
-                    android:layout_width="400dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/name_faculty"
                     android:fontFamily="@font/comfortaa_light"
@@ -48,6 +48,15 @@
                     android:layout_marginTop="10dp"
                     android:hint="number_here"
                     android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/call_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/call_icon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
 
 
             </RelativeLayout>
