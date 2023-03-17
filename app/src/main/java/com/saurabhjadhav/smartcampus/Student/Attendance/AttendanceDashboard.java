@@ -58,11 +58,12 @@ public class AttendanceDashboard extends AppCompatActivity implements AdapterVie
                             if (fieldValue.equals("1")) {
                                 Intent i = new Intent(AttendanceDashboard.this, ServiceDown.class);
                                 i.putExtra("error_msg", message);
+                                Log.d("service1", "serviceerr");
                                 startActivity(i);
                             }
                         } else {
                             // Handle error
-
+                                Log.d("service2", "service error");
                         }
                     }
                 });

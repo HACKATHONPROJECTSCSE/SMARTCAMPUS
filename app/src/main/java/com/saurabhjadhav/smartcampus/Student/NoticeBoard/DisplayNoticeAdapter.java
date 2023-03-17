@@ -64,9 +64,6 @@ public class DisplayNoticeAdapter extends RecyclerView.Adapter<DisplayNoticeAdap
                 Toast.makeText(context, "Image downloading...", Toast.LENGTH_SHORT).show();
             }
         });
-
-
-
     }
 
     @Override

@@ -17,7 +17,7 @@ public class ServiceDown extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
         setContentView(R.layout.activity_service_down);
         Window window = this.getWindow();
         window.setStatusBarColor(this.getResources ().getColor(R.color.purple_700));
