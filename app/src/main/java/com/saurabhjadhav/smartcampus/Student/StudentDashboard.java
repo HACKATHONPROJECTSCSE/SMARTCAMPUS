@@ -23,6 +23,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.saurabhjadhav.smartcampus.R;
 import com.saurabhjadhav.smartcampus.Student.Attendance.AttendanceDashboard;
+
 import com.saurabhjadhav.smartcampus.Student.DeveloperInfo.DeveloperInfo;
 import com.saurabhjadhav.smartcampus.Student.Elrc.StudentElrcHome;
 import com.saurabhjadhav.smartcampus.Student.GateEntryExit.GateEntryExitDashboard;
@@ -45,7 +46,7 @@ public class StudentDashboard extends AppCompatActivity {
     Button profile, studentTodo;
     TextView username;
     ImageView profileImage;
-    LinearLayout campusView, noticeView, websiteView, messageView, fitnessView, developerView, elrcView, shield, gatepass, impContacts, complaint, quotes, GateEntryView, attendanceView;
+    LinearLayout campusView, noticeView, websiteView, messageView, fitnessView, developerView, elrcView, shield, gatepass, impContacts, complaint, quotes, GateEntryView, attendanceView, cgpaCalculator;
 
     // FIREBASE
 
@@ -79,6 +80,7 @@ public class StudentDashboard extends AppCompatActivity {
         quotes = findViewById(R.id.MotivationalQuotes);
         GateEntryView = findViewById(R.id.GateEntryView);
         attendanceView = findViewById(R.id.AttendanceView);
+
 
 
         // FIREBASE
@@ -200,6 +202,16 @@ public class StudentDashboard extends AppCompatActivity {
                 startActivity(new Intent(StudentDashboard.this, StudentImportantContacts.class));
             }
         });
+
+     /*   cgpaCalculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StudentDashboard.this, CgpaDashboard.class));
+            }
+        });
+
+
+      */
 
      /*   complaint.setOnClickListener(new View.OnClickListener() {
             @Override
