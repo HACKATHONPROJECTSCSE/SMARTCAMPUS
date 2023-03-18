@@ -23,7 +23,7 @@ public class DeveloperInfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_developer_info);
-
+/*
         detailsText1 = findViewById(R.id.detailsHide);
         detailsText2 = findViewById(R.id.detailsHide2);
         detailsText4 = findViewById(R.id.detailsHide);
@@ -60,5 +60,7 @@ public class DeveloperInfo extends AppCompatActivity {
 
         TransitionManager.beginDelayedTransition(layout, new AutoTransition());
         detailsText4.setVisibility(v);
+
+ */
     }
 }
