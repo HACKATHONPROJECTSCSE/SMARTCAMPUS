@@ -68,8 +68,8 @@ public class CheckOutActivity extends AppCompatActivity implements CheckOutAdapt
         recyclerView = findViewById(R.id.recycler);
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(CheckOutActivity.this, RecyclerView.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        noChekedIn = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        noChekedIn = findViewById(R.id.message);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setSelectedItemId(R.id.navigation_dashboard);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         getUsers();

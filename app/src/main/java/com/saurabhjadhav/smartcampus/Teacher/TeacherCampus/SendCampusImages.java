@@ -32,8 +32,8 @@ public class SendCampusImages extends AppCompatActivity {
     private Button uploadBtn;
     private ImageView imageView;
     private ProgressBar progressBar;
-    private DatabaseReference root = FirebaseDatabase.getInstance().getReference("CampusImages");
-    private StorageReference reference = FirebaseStorage.getInstance().getReference();
+    private final DatabaseReference root = FirebaseDatabase.getInstance().getReference("CampusImages");
+    private final StorageReference reference = FirebaseStorage.getInstance().getReference();
     private Uri imageUri;
 
     String descriptionName;

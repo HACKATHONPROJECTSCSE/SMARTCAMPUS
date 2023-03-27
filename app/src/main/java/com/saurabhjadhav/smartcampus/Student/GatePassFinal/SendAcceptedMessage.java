@@ -1,4 +1,4 @@
-package com.saurabhjadhav.smartcampus.Gatepass;
+package com.saurabhjadhav.smartcampus.Student.GatePassFinal;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -15,13 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -45,6 +43,10 @@ public class SendAcceptedMessage extends AppCompatActivity {
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     private final CollectionReference myTaskRef = db.collection("GatepassNew");
 
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("Gatepass");
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,11 +63,21 @@ public class SendAcceptedMessage extends AppCompatActivity {
         userId = firebaseAuth.getCurrentUser().getUid();
         firebaseUser = firebaseAuth.getCurrentUser();
 
+        // new code
+
+        // Working
+
+        Bundle extras = getIntent().getExtras();
+        String getContact = extras.getString("contactNo");
+
+        contact.setText(getContact);
+/*
+
         DocumentReference documentReference = firebaseFirestore.collection("GatepassNew").document(userId);
         documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(@NonNull DocumentSnapshot documentSnapshot) {
-                contact.setText(documentSnapshot.getString("ContactNo"));
+                contact.setText(documentSnapshot.getString("+917410140535"));
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -74,6 +86,8 @@ public class SendAcceptedMessage extends AppCompatActivity {
             }
         });
 
+
+ */
         sendAccepted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

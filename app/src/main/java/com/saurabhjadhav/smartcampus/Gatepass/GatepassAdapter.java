@@ -22,6 +22,10 @@ public class GatepassAdapter extends FirestoreRecyclerAdapter<GatepassModel, Gat
         super(options);
     }
 
+    public Context getContext() {
+        return context;
+    }
+
     @Override
     protected void onBindViewHolder(@NonNull GatepassHolder gatepassHolder, int i, @NonNull GatepassModel gatepassModel) {
         gatepassHolder.fullName.setText(gatepassModel.getFullnname());
@@ -38,7 +42,7 @@ public class GatepassAdapter extends FirestoreRecyclerAdapter<GatepassModel, Gat
         gatepassHolder.leaveDate.setText(gatepassModel.getLeaveDate());
         gatepassHolder.returnDate.setText(gatepassModel.getReturnDate());
         gatepassHolder.returnTime.setText(gatepassModel.getReturnTime());
-        
+
 
     }
 

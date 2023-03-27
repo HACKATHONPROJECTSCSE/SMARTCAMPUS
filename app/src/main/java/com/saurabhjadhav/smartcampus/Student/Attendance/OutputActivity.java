@@ -153,7 +153,7 @@ public class OutputActivity extends AppCompatActivity {
                         }
 
                         if(!(atte.has(date))) {
-                            RelativeLayout layout = (RelativeLayout) findViewById(R.id.rel_pa);
+                            RelativeLayout layout = findViewById(R.id.rel_pa);
                             layout.setVisibility(View.GONE);
                         }
 

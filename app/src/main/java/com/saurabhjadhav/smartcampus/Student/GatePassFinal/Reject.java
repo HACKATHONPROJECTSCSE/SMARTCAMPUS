@@ -1,4 +1,4 @@
-package com.saurabhjadhav.smartcampus.Gatepass;
+package com.saurabhjadhav.smartcampus.Student.GatePassFinal;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -29,7 +29,7 @@ import com.saurabhjadhav.smartcampus.R;
 
 public class Reject extends AppCompatActivity {
 
-    TextView contact;
+    TextView contactReject;
     EditText accepted;
 
     FirebaseAuth firebaseAuth;
@@ -38,7 +38,7 @@ public class Reject extends AppCompatActivity {
     String userId;
     FirebaseUser firebaseUser;
 
-    Button sendAccepted;
+    Button sendRejected;
 
     FirebaseAuth fAuth = FirebaseAuth.getInstance();
     String user = fAuth.getCurrentUser().getUid();
@@ -50,16 +50,25 @@ public class Reject extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reject);
 
-        contact = findViewById(R.id.contactNo);
+        contactReject = findViewById(R.id.contactNoReject);
         accepted = findViewById(R.id.accepted);
 
-        sendAccepted = findViewById(R.id.sendAccepted);
+        sendRejected = findViewById(R.id.sendRejected);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
         userId = firebaseAuth.getCurrentUser().getUid();
         firebaseUser = firebaseAuth.getCurrentUser();
+
+
+        Bundle extras1 = getIntent().getExtras();
+        String getContact1 = extras1.getString("contactNo");
+
+        contactReject.setText(getContact1);
+
+        /*
+
 
         DocumentReference documentReference = firebaseFirestore.collection("GatepassNew").document(userId);
         documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -74,7 +83,9 @@ public class Reject extends AppCompatActivity {
             }
         });
 
-        sendAccepted.setOnClickListener(new View.OnClickListener() {
+
+         */
+        sendRejected.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (ContextCompat.checkSelfPermission(Reject.this, Manifest.permission.SEND_SMS)
@@ -89,7 +100,7 @@ public class Reject extends AppCompatActivity {
     }
 
     private void sendMessage() {
-        String sPhone = contact.getText().toString().trim();
+        String sPhone = contactReject.getText().toString().trim();
         String sMessage = accepted.getText().toString().trim();
 
         if (!sPhone.equals("") && !sMessage.equals("")) {

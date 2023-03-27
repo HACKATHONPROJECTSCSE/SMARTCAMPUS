@@ -82,7 +82,7 @@ public class GateEntryExitDashboard extends AppCompatActivity {
         checkInButton = findViewById(R.id.check_in_button);
         //disableAutofill();
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         checkInButton.setOnClickListener(new View.OnClickListener() {
             @Override

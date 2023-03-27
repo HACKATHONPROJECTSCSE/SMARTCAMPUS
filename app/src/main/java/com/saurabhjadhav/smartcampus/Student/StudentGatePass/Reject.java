@@ -50,16 +50,26 @@ public class Reject extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reject);
 
-        contact = findViewById(R.id.contactNo);
+        contact = findViewById(R.id.contactNoReject);
         accepted = findViewById(R.id.accepted);
 
-        sendAccepted = findViewById(R.id.sendAccepted);
+        sendAccepted = findViewById(R.id.sendRejected);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
         userId = firebaseAuth.getCurrentUser().getUid();
         firebaseUser = firebaseAuth.getCurrentUser();
+
+
+        Bundle extras1 = getIntent().getExtras();
+        String getContact1 = extras1.getString("contactNo");
+
+        contact.setText(getContact1);
+
+
+        /*
+
 
         DocumentReference documentReference = firebaseFirestore.collection("GatePass").document(userId);
         documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -74,6 +84,9 @@ public class Reject extends AppCompatActivity {
             }
         });
 
+
+         */
+
         sendAccepted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,6 +98,9 @@ public class Reject extends AppCompatActivity {
                 }
             }
         });
+
+
+
 
     }
 

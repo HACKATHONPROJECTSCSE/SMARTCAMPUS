@@ -18,7 +18,7 @@ import com.saurabhjadhav.smartcampus.R;
 import java.util.List;
 
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.EventViewHolder> {
-    private List<Contact> ContactList;
+    private final List<Contact> ContactList;
     LayoutInflater layoutInflaterContacts;
     Context context;
 

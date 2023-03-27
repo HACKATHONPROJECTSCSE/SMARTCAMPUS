@@ -27,6 +27,8 @@ import com.saurabhjadhav.smartcampus.Student.Attendance.AttendanceDashboard;
 import com.saurabhjadhav.smartcampus.Student.DeveloperInfo.DeveloperInfo;
 import com.saurabhjadhav.smartcampus.Student.Elrc.StudentElrcHome;
 import com.saurabhjadhav.smartcampus.Student.GateEntryExit.GateEntryExitDashboard;
+import com.saurabhjadhav.smartcampus.Student.GatePassFinal.GatePassDashboardFinal;
+import com.saurabhjadhav.smartcampus.Student.GatePassFinal.GatepassReciverFinal;
 import com.saurabhjadhav.smartcampus.Student.ImportantContacts.StudentImportantContacts;
 import com.saurabhjadhav.smartcampus.Student.NoticeBoard.DisplayNotice;
 import com.saurabhjadhav.smartcampus.Student.PlacementPrediction.ChatBot;
@@ -48,7 +50,7 @@ public class StudentDashboard extends AppCompatActivity {
     Button profile, studentTodo;
     TextView username;
     ImageView profileImage;
-    LinearLayout campusView, noticeView, websiteView, messageView, fitnessView, developerView, elrcView, shield, gatepass, impContacts, complaint, quotes, GateEntryView, attendanceView, placementPredicition,chatBot;
+    LinearLayout campusView, noticeView, websiteView, messageView, fitnessView, developerView, elrcView, shield, gatepass, impContacts, complaint, quotes, GateEntryView, attendanceView, placementPredicition,chatBot,gatepassTemp;
 
     // FIREBASE
 
@@ -77,6 +79,7 @@ public class StudentDashboard extends AppCompatActivity {
         elrcView = findViewById(R.id.ElrcView);
         shield = findViewById(R.id.Shield);
         gatepass = findViewById(R.id.Gatepass);
+        gatepassTemp = findViewById(R.id.gatepassTemp);
         impContacts = findViewById(R.id.ImpContacts);
         complaint = findViewById(R.id.ComplaintAAP);
         quotes = findViewById(R.id.MotivationalQuotes);
@@ -180,7 +183,14 @@ public class StudentDashboard extends AppCompatActivity {
         gatepass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(StudentDashboard.this, GatepassDashboard.class));
+                startActivity(new Intent(StudentDashboard.this, GatePassDashboardFinal.class));
+            }
+        });
+
+        gatepassTemp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StudentDashboard.this, GatepassReciverFinal.class));
             }
         });
 

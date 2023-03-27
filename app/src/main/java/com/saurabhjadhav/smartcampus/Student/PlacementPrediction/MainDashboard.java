@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +26,8 @@ import java.util.Map;
 
 public class MainDashboard extends AppCompatActivity {
 
-    EditText cgpa, iq, profile_score;
+    EditText age, internships, cgpa;
+    RadioGroup radioGroupGender, radioGroupStream, radioGroupHosteler, radioGroupBacklog;
     Button predict;
     TextView result;
     String url = "https://web-production-ff48.up.railway.app/predict";
@@ -35,15 +37,21 @@ public class MainDashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_dashboard);
 
-        cgpa = findViewById(R.id.cgpa);
-        iq = findViewById(R.id.iq);
-        profile_score = findViewById(R.id.profile_score);
-        predict = findViewById(R.id.predict);
-        result = findViewById(R.id.result);
+        radioGroupGender = findViewById(R.id.radioGroup);
+        radioGroupStream = findViewById(R.id.radioGroupStream);
+        radioGroupHosteler = findViewById(R.id.radioGroupHosteller);
+        radioGroupBacklog = findViewById(R.id.radioGroupBacklog);
 
         predict.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+                int selectGender = radioGroupGender.getCheckedRadioButtonId();
+                int selectStream = radioGroupStream.getCheckedRadioButtonId();
+                int selectHosteler = radioGroupHosteler.getCheckedRadioButtonId();
+                int selectBacklog = radioGroupBacklog.getCheckedRadioButtonId();
+
                 // hit the API -> Volley
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {
@@ -74,9 +82,14 @@ public class MainDashboard extends AppCompatActivity {
                     @Override
                     protected Map<String, String> getParams() {
                         Map<String, String> params = new HashMap<String, String>();
+
+                        params.put("age", age.getText().toString());
+                        params.put("internship", internships.getText().toString());
                         params.put("cgpa", cgpa.getText().toString());
-                        params.put("iq", iq.getText().toString());
-                        params.put("profile_score", profile_score.getText().toString());
+
+                        params.put("male", cgpa.getText().toString());
+                        params.put("female", cgpa.getText().toString());
+
 
                         return params;
                     }
