@@ -296,22 +296,12 @@
                         android:textSize="20sp" />
 
                     <Button
-                        android:id="@+id/acceptBtn"
+                        android:id="@+id/checkInGatepass"
                         style="@style/loginBtn"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="10dp"
-                        android:text="ACCEPT"
-                        android:textColor="@color/white"
-                        android:transitionName="btnGotransition" />
-
-                    <Button
-                        android:id="@+id/rejectBtn"
-                        style="@style/loginBtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
-                        android:text="REJECT"
+                        android:text="Check In"
                         android:textColor="@color/white"
                         android:transitionName="btnGotransition" />
 

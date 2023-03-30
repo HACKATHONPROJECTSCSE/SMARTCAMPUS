@@ -94,7 +94,6 @@ public class CheckOutActivity extends AppCompatActivity implements CheckOutAdapt
                     noChekedIn.setVisibility(View.VISIBLE);
                 }
                 progressDialog.dismiss();
-
             }
 
             @Override
